@@ -1,0 +1,30 @@
+Everything is great.
+
+Problems: example
+
+1.
+
+W4.Num	Code	  UniversityLink1	            UniversityLink2	           UniversityLink3
+1	   missouri	 UniversityofMissouri_1.txt	   UniversityofMissouri_2.txt
+
+[the label and everything is correct, but it doesn't show the content of the link]
+
+2.
+
+the order of the excel sheet is messed up. it is not the same as the input,
+ and not as alphabetical order.
+
+alphabetical order
+
+3.
+the format of input of txt is a bit different than wave4 example.
+because wave 4 input has the university url. such as this https://www.adelphi.edu/diversity/.
+
+other wave does not have it. it I just input the content directly,
+how the Derek know the university and url and content is matching. Tried to ask Derek for this.
+could I change the add another column just for clarification.
+
+4.
+another problem, sometimes the files names does not match because it used abbreviation,
+Arizona State University is "asu", how to avoid the error like this.
+
