@@ -1,0 +1,67 @@
+Everything is great.
+
+Problems: example
+
+1.
+
+W4.Num	Code	  UniversityLink1	            UniversityLink2	           UniversityLink3
+1	   missouri	 UniversityofMissouri_1.txt	   UniversityofMissouri_2.txt
+
+[the label and everything is correct, but it doesn't show the content of the link]
+
+2.
+
+the order of the excel sheet is messed up. it is not the same as the input,
+ and not as alphabetical order.
+
+alphabetical order
+
+3.
+the format of input of txt is a bit different than wave4 example.
+because wave 4 input has the university url. such as this https://www.adelphi.edu/diversity/.
+
+other wave does not have it. it I just input the content directly,
+how the Derek know the university and url and content is matching. Tried to ask Derek for this.
+could I change the add another column just for clarification.
+
+4.
+another problem, sometimes the files names does not match because it used abbreviation,
+Arizona State University is "asu", how to avoid the error like this.
+
+----------------------------------------
+4/10/2025
+
+main change:
+
+- ordered the output data that match the input data
+
+- opened the content of the subfolder instead of just copying the name
+
+- fixed the cvs in google sheet, changed the cell size to default,
+ so its not super long and wide each cell. (clicked resize the row)
+
+----
+next step:
+
+one more thing to verify:
+
+- the content space in google sheet does it matter, does it need to reduce.
+
+- do we need a verify process to make sure the content matched with the school, and each cell.
+also is it all the universities.
+
+--------
+explaining the error.
+
+byu: it does not have a second link, show Derek the input folder.
+
+msu: second link is missing due to file size(input) is too large.
+it has:
+39 of 39 pages
+Words	22931 of 22931
+Characters	153,522 of 153,522
+
+and the google sheet, single cell limit has only 50,000 characters.
+
+When I changed to other input, such as a single line. It will show on the google sheet.
+it also shows in python, so the limitation is google sheet in this case.
