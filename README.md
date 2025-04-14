@@ -1,6 +1,6 @@
 # University Data Extractor
 
-This script provides structured organization of university research data for the `Stanford Stark Lab`. It systematically processes directories containing university-specific text files and generates a standardized CSV output where:
+This script provides structured organization of university research data for the `Stanford Univeristy Stark Lab`. It systematically processes directories containing university-specific text files and generates a standardized CSV output where:
 
 - Each row corresponds to a university (identified by its folder code)
 - Columns represent sequentially numbered text files (`1.txt`, `2.txt`, etc.) from each university's directory
@@ -127,3 +127,6 @@ Google Sheets will skip that cell, as it exceeds the limit.
 # Contributors 👩‍💻
 * Helan Wang 
 * Christylan1121@gmail.com
+
+# Contact
+* `Stanford University (Starks Lab)`
