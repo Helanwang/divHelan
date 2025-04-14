@@ -53,7 +53,7 @@ This script reads university folders and extracts text content from `.txt` files
 #### 🔹 1. Access and Sort University Folders
 Lists and filters all university folders:
 
-This scans the input directory (wave3_path) and builds a list of all subfolders, one per university. It uses os.path.isdir to include only folders (not files), and sorted() ensures they’re processed alphabetically.
+This scans the input directory `(wave3_path)` and builds a list of all subfolders, one per university. It uses `os.path.isdir` to include only folders (not files), and `sorted()` ensures they’re processed alphabetically.
 
 ```python
 
@@ -68,9 +68,9 @@ txt_files = sorted([
 ])
 ```
 
-#### 🔹 2. Access and Sort .txt Files Within Each Folder
+#### 🔹 2. Access and Sort `.txt` Files Within Each Folder
 
-This looks inside each university folder and collects only .txt files. Sorting ensures the order (like 1.txt, 2.txt, etc.) is preserved in the output.
+This looks inside each university folder and collects only `.txt` files. Sorting ensures the order (like `1.txt`, `2.txt`, etc.) is preserved in the output.
 
 ```python
 txt_files = sorted([
@@ -80,7 +80,7 @@ txt_files = sorted([
 ```
 
 #### 🔹 3. Read Text File Content with Error Handling
-This reads the content of each .txt file. If there’s an error (e.g., file missing, encoding issue), it logs the error and safely adds a placeholder ("ERROR_READING_FILE") to the output instead of crashing.
+This reads the content of each .txt file. If there’s an error (e.g., file missing, encoding issue), it logs the error and safely adds a placeholder` ("ERROR_READING_FILE")` to the output instead of crashing.
 
 ```python
 try:
