@@ -1,6 +1,6 @@
 # University Data Extractor
 
-This script provides structured organization of university research data for the Stanford Stark Lab. It systematically processes directories containing university-specific text files and generates a standardized CSV output where:
+This script provides structured organization of university research data for the `Stanford Stark Lab`. It systematically processes directories containing university-specific text files and generates a standardized CSV output where:
 
 - Each row corresponds to a university (identified by its folder code)
 - Columns represent sequentially numbered text files (`1.txt`, `2.txt`, etc.) from each university's directory
@@ -10,7 +10,7 @@ This script provides structured organization of university research data for the
 
 # Limitations
 
-* Google Sheets: Cells truncate at 50,000 characters
+* Google Sheets: Cells truncate at `50,000 characters`
 * Fixed Structure: Folders must match exact hierarchy
 * Max Files: Processes only `1.txt` to `6.txt` per university
 
@@ -108,11 +108,11 @@ Data will NOT be processed if the following tree hierarchy structure is not foll
 ✅  The script includes built-in checks for:
 * Duplicate entries
 * Mismatch between input folders and output rows
-* Inconsistent .txt file counts between folders and output columns
+* Inconsistent `.txt` file counts between folders and output columns
 
 # Known Issues
 
-When importing the generated .csv into Google Sheets, long text entries may exceed the cell limit of 50,000 characters. If a cell exceeds this, Google Sheets will skip the content.
+When importing the generated .csv into Google Sheets, long text entries may exceed the cell limit of `50,000 characters`. If a cell exceeds this, Google Sheets will skip the content.
 
 Example:
 
