@@ -49,11 +49,14 @@ This script reads university folders and extracts text content from `.txt` files
     At the end, the script prints how many unique universities were processed and confirms the location of the saved CSV.
 
 # Technical Mechanisms ⚙️
-#### 1. **Directory Traversal and Filtering**
 
+#### 🔹 1. Access and Sort University Folders
 Lists and filters all university folders:
 
+This scans the input directory (wave3_path) and builds a list of all subfolders, one per university. It uses os.path.isdir to include only folders (not files), and sorted() ensures they’re processed alphabetically.
+
 ```python
+
 folder_names = sorted([
     f for f in os.listdir(wave3_path)
     if os.path.isdir(os.path.join(wave3_path, f))
@@ -65,12 +68,19 @@ txt_files = sorted([
 ])
 ```
 
+#### 🔹 2. Access and Sort .txt Files Within Each Folder
+
+This looks inside each university folder and collects only .txt files. Sorting ensures the order (like 1.txt, 2.txt, etc.) is preserved in the output.
+
 ```python
 txt_files = sorted([
     f for f in os.listdir(folder_path)
     if f.endswith(".txt")
 ])
 ```
+
+#### 🔹 3. Read Text File Content with Error Handling
+This reads the content of each .txt file. If there’s an error (e.g., file missing, encoding issue), it logs the error and safely adds a placeholder ("ERROR_READING_FILE") to the output instead of crashing.
 
 ```python
 try:
@@ -82,9 +92,29 @@ except Exception as e:
     row[f"UniversityLink{i}"] = "ERROR_READING_FILE"
 ```
 
+#### 🔹 4. Construct Data Row for Each University
+
+Creates a dictionary for one university’s row. It includes:
+* `W4.Num`: a sequential row number
+* `Code`: the folder name (used as the university code)
+
+Text content from `.txt` files is added later to this same row.
 ```python
 row = {"W4.Num": len(output_data) + 1, "Code": folder_name}
 ```
+
+#### 🔹 5. Define CSV Column Headers
+
+Defines column names for the output CSV. This includes:
+* The university index and code 
+* A set of link columns for up to 6 text files (can be adjusted if needed)
+```python
+fieldnames = ["W4.Num", "Code"] + [f"UniversityLink{i}" for i in range(1, 7)]
+```
+
+
+#### 🔹 6. Write All Rows to CSV File
+ Writes all rows to a `.csv` file. `newline=""` avoids extra line breaks on Windows. `utf-8` encoding ensures all characters are preserved. It first writes the header row, then writes all university data rows.
 
 ```python
 with open(output_csv_path, mode="w", newline="", encoding="utf-8") as csv_file:
@@ -93,10 +123,17 @@ with open(output_csv_path, mode="w", newline="", encoding="utf-8") as csv_file:
     writer.writerows(output_data)
 ```
 
+#### 🔹 7. Count Unique Universities and Print Result
+After processing, this counts how many unique universities were included and prints that number to the terminal as a summary check.
 ```python
 unique_codes = set(row['Code'] for row in output_data)
 print(f"Total number of universities (unique codes): {len(unique_codes)}")
 ```
+
+
+
+
+
 
 # Limitations
 
