@@ -83,6 +83,8 @@ The data MUST follow the certain folder structure to make sure the program proce
 
 Data will NOT be processed if the following tree hierarchy structure is not followed. Name of the files can be modified. 
 
+<pre lang="nohighlight"><code>
+```
 .
 ├── WaveName/   # Root Directory
 └── └── University File/  # Parent directory/
@@ -94,6 +96,8 @@ Data will NOT be processed if the following tree hierarchy structure is not foll
     ├── │   ├── 1.txt
     ├── │   └── ...
     └── └── ...
+```
+</code></pre>
 
 
 # Verification Program:
