@@ -53,7 +53,10 @@ also is it all the universities.
 --------
 explaining the error.
 
-byu: it does not have a second link, show Derek the input folder.
+the check are marked in blue, the input matches the output, no error.
+input labeled wrong.
+
+byu: same error, files are too large
 
 msu: second link is missing due to file size(input) is too large.
 it has:
@@ -65,3 +68,9 @@ and the google sheet, single cell limit has only 50,000 characters.
 
 When I changed to other input, such as a single line. It will show on the google sheet.
 it also shows in python, so the limitation is google sheet in this case.
+
+----
+A lot of the cells are missing because the characters are above 50,000.
+maybe write a program to detect which txt files are above 50,000.
+
+explain the error

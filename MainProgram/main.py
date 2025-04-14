@@ -1,7 +1,7 @@
 import os
 import csv
 
-wave3_path = "/Wave3/2021UniversityFiles"
+wave3_path = "/Users/helanwang/PycharmProjects/divHelan/Wave3/2021UniversityFiles"
 output_data = []
 
 # Get all folders and SORT them to maintain order
@@ -27,7 +27,7 @@ for folder_name in folder_names:
     output_data.append(row)
 
 # Write to CSV
-output_csv_path = "../outputCvs/output_wave3_content_ordered.csv"
+output_csv_path = "/Users/helanwang/PycharmProjects/divHelan/outputCvs/output_wave3_content_ordered.csv"
 fieldnames = ["W4.Num", "Code"] + [f"UniversityLink{i}" for i in range(1, 7)]  # Adjust columns as needed
 
 with open(output_csv_path, mode="w", newline="", encoding="utf-8") as csv_file:
