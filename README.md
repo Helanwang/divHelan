@@ -8,6 +8,65 @@ This script provides structured organization of university research data for the
 
 ---
 
+# Logic of the code
+### 🧠 How the Script Works
+
+This script reads university folders and extracts text content from `.txt` files to create a clean, organized `.csv` file.
+
+#### Step-by-Step:
+
+1. **Access the Input Folder**  
+   The program looks inside the main directory that holds all the university folders.
+
+2. **Identify All University Folders**  
+   It finds each subfolder inside the input folder. Every subfolder represents a university (e.g., `adelphi`, `stanford`).
+
+3. **Sort the Folders Alphabetically**  
+   To keep the output consistent and easy to read, the university folders are processed in alphabetical order.
+
+4. **Go Into Each University Folder**  
+   Inside each university folder, the program finds all `.txt` files.
+
+5. **Sort the Text Files**  
+   These `.txt` files are sorted by filename (like `1.txt`, `2.txt`, etc.) so they appear in the right sequence in the CSV.
+
+6. **Read Each Text File's Content**  
+   The content of each `.txt` file is read and stored for that university.
+
+7. **Create a Row of Data for Each University**  
+   A new row is created that includes:
+   - A sequential number (`W4.Num`)
+   - The university’s folder name (`Code`)
+   - The contents of each text file (`UniversityLink1`, `UniversityLink2`, ...)
+
+8. **Repeat for All Universities**  
+   This process continues for every university folder found in the input.
+
+9. **Export the Data to a CSV File**  
+   After collecting all the data, it's written to a `.csv` file using clearly labeled columns.
+
+10. **Print the Result**  
+    At the end, the script prints how many unique universities were processed and confirms the location of the saved CSV.
+
+# Technical Mechanisms ⚙️
+#### 1. **Directory Traversal and Filtering**
+
+Lists and filters all university folders:
+
+```python
+
+folder_names = sorted([
+    f for f in os.listdir(wave3_path)
+    if os.path.isdir(os.path.join(wave3_path, f))
+])
+
+txt_files = sorted([
+    f for f in os.listdir(folder_path)
+    if f.endswith(".txt")
+])
+```
+
+
 # Limitations
 
 * Google Sheets: Cells truncate at `50,000 characters`
