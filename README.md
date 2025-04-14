@@ -103,9 +103,9 @@ Data will NOT be processed if the following tree hierarchy structure is not foll
 # Verification Program:
 
 ✅  The script includes built-in checks for:
-	•	Duplicate entries
-	•	Mismatch between input folders and output rows
-	•	Inconsistent .txt file counts between folders and output columns
+* Duplicate entries
+* Mismatch between input folders and output rows
+* Inconsistent .txt file counts between folders and output columns
 
 # Known Issues
 
@@ -114,13 +114,13 @@ When importing the generated .csv into Google Sheets, long text entries may exce
 Example:
 
 If a file like msu/2.txt has:
-	•	39 pages
-	•	22,931 words
-	•	153,522 characters
+* 39 pages
+* 22,931 words
+* 153,522 characters
 
 Google Sheets will skip that cell, as it exceeds the limit.
 
 
 # Contributors 👩‍💻
-Helan Wang 
-Christylan1121@gmail.com
+* Helan Wang 
+* Christylan1121@gmail.com
