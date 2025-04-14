@@ -61,21 +61,24 @@ The script outputs a `.csv` file with the following structure:
 
 ### 1. Clone the Repository
 
-bash:
+```bash
 git clone git@github.com:Helanwang/divHelan.git
-
-
-
+```
 
 # Configuration
 
 Edit these variables:
+```python 
 wave3_path = "/Users/helanwang/PycharmProjects/divHelan/Wave3/2021UniversityFiles"
 output_csv_path = "/Users/helanwang/PycharmProjects/divHelan/outputCvs/output_wave3_content_ordered.csv"
+```
 
 
 # Execute the Code in Terminal:
+
+``` bash
 python university_data_extractor.py
+```
 
 # Reusability
 
