@@ -12,7 +12,7 @@ This script provides structured organization of university research data for the
 
 * Google Sheets: Cells truncate at 50,000 characters
 * Fixed Structure: Folders must match exact hierarchy
-* Max Files: Processes only 1.txt to 6.txt per university
+* Max Files: Processes only `1.txt` to `6.txt` per university
 
 ---
 ## 📁 Input Directory Structure
@@ -116,7 +116,7 @@ When importing the generated .csv into Google Sheets, long text entries may exce
 
 Example:
 
-If a file like msu/2.txt has:
+If a file like `msu/2.txt` has:
 * 39 pages
 * 22,931 words
 * 153,522 characters
