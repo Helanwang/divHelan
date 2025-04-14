@@ -18,15 +18,23 @@ This script provides structured organization of university research data for the
 ## 📁 Input Directory Structure
 
 The input data **must** follow a specific folder structure for the script to work properly:
-Wave3/
-└── 2021UniversityFiles/
-    ├── /adelphi
-    │   ├── file1.txt    │   ├── file2.txt
-    │   └── ...
-    ├── /albany
-    │   ├── file1.txt
-    │   └── file2.txt
-    └── /alliant
+
+<pre lang="nohighlight"><code>
+```
+.
+├── Wave3/
+└── └── 2021UniversityFiles/
+    ├── ├── adelphi/
+    ├── │   ├── 1.txt
+    ├── │   ├── 2.txt
+    ├── ├── albany/
+    ├── │   ├── 1.txt
+    ├── │   └── 2.txt
+    └── └── alliant/
+        └── └── 1.txt
+```
+</code></pre>
+
 
 ---
 
