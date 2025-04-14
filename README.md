@@ -54,8 +54,6 @@ This script reads university folders and extracts text content from `.txt` files
 Lists and filters all university folders:
 
 ```python
-
-
 folder_names = sorted([
     f for f in os.listdir(wave3_path)
     if os.path.isdir(os.path.join(wave3_path, f))
@@ -67,6 +65,38 @@ txt_files = sorted([
 ])
 ```
 
+```python
+txt_files = sorted([
+    f for f in os.listdir(folder_path)
+    if f.endswith(".txt")
+])
+```
+
+```python
+try:
+    with open(file_path, 'r', encoding='utf-8') as f:
+        content = f.read().strip()
+        row[f"UniversityLink{i}"] = content
+except Exception as e:
+    print(f"Error reading {file_path}: {e}")
+    row[f"UniversityLink{i}"] = "ERROR_READING_FILE"
+```
+
+```python
+row = {"W4.Num": len(output_data) + 1, "Code": folder_name}
+```
+
+```python
+with open(output_csv_path, mode="w", newline="", encoding="utf-8") as csv_file:
+    writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
+    writer.writeheader()
+    writer.writerows(output_data)
+```
+
+```python
+unique_codes = set(row['Code'] for row in output_data)
+print(f"Total number of universities (unique codes): {len(unique_codes)}")
+```
 
 # Limitations
 
